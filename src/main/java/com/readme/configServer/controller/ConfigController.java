@@ -8,9 +8,4 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/config")
 public class ConfigController {
 
-    @GetMapping
-    public String test() {
-        return "@@@@@@@@@@@@@@";
-    }
-
 }
