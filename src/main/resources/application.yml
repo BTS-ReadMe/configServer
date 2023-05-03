@@ -2,18 +2,19 @@ server:
   port: 8888
 
 spring:
+  application:
+    name: config-server
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/BTS-ReadMe/configServer
-          search-paths: config
+          uri: https://github.com/BTS-ReadMe/config
 
-#eureka:
-#  instance:
-#    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-#  client:
-#    register-with-eureka: true
-#    fetch-registry: true
-#    service-url:
-#      defaultZone: http://localhost:8761/eureka
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
